@@ -41,7 +41,7 @@ async def main():
                 pbar.update(1)
 
     # Código para clicar no botão através do XPath
-    selector = '/html/body/header/div/a'  # Substitua pelo XPath correto
+    selector = '/html/body/header/div/a'  # Substitua pelo XPath do seu browser(so abrir a home e inspect > botao em cima > copy xpath)
     await page.waitForXPath(selector)
     link = await page.xpath(selector)
     if link:
