@@ -3,6 +3,9 @@ from pyppeteer import launch
 import time
 import requests
 
+# Script em python para simular o comportamento do ticket https://tickets.azion.com/a/tickets/14039
+# Instalar pyppeteer "pip install pyppeteer"
+
 async def track_redirects(response):
     if response.status >= 300 and response.status < 400:
         print(f"Redirecionado de {response.request.url} para {response.headers['location']}")
